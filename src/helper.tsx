@@ -23,13 +23,13 @@ async function readFilesToPost(fileNames: string[]): Promise<Post[]> {
   try {
     const filePromises = fileNames.map(async (fileName) => {
         const content = await promises.readFile(join(mdPath, fileName), 'utf8');
-        const postMatter = matter(content);
+        const postMatter = matter(content, { excerpt: true });
 
         return {
           name: fileName.replace('.md', ''),
           published: postMatter.data.published,
           updated: postMatter.data.updated,
-          excerpt: postMatter.data.excerpt,
+          excerpt: postMatter.excerpt || '',
           content: postMatter.content,
         }
     });

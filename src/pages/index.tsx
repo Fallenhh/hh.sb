@@ -17,6 +17,7 @@ export default async function HomePage() {
         </li>);
     }
   )
+  console.log(postArray);
   return (
     <div>
       <title>{data.title}</title>
