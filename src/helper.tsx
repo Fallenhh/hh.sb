@@ -1,21 +1,20 @@
 import { readdirSync, promises} from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
+import { join } from 'path';
 
 import matter from 'gray-matter';
 
 
 export type Post = {
   name: string,
+  title: string,
   published: Date,
   updated?: Date,
   excerpt?: string,
   content: string,
 }
 
-
-export const __dirname = dirname(fileURLToPath(import.meta.url));
-export const mdPath = join(__dirname, './md');
+console.log(process.cwd())
+export const mdPath = './src/md';
 
 const mdFiles: string[] = readdirSync(mdPath).filter(filename  => filename.endsWith('.md'));
 
@@ -27,6 +26,7 @@ async function readFilesToPost(fileNames: string[]): Promise<Post[]> {
 
         return {
           name: fileName.replace('.md', ''),
+          title: postMatter.data.title,
           published: postMatter.data.published,
           updated: postMatter.data.updated,
           excerpt: postMatter.excerpt || '',

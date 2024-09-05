@@ -10,7 +10,7 @@ export default async function HomePage() {
       return (
         <li key={post.name}>
         <div>
-          <h2>{post.name}</h2>
+          <h2>{post.title}</h2>
           <Markdown remarkPlugins={[remarkGfm]}>{post.excerpt}</Markdown>
           <Link to={'/posts/'+ post.name} className="mt-4 inline-block underline"> Read More </Link>
         </div>
@@ -22,7 +22,7 @@ export default async function HomePage() {
     <div>
       <title>{data.title}</title>
       <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
-      <p>{data.body}</p>
+      <p>{data.subtitle}</p>
       <ul>{postList}</ul>
       <Link to="/about" className="mt-4 inline-block underline">
         About page
@@ -34,9 +34,9 @@ export default async function HomePage() {
 
 const getData = async () => {
   const data = {
-    title: 'Waku',
-    headline: 'Waku',
-    body: 'Hello world!',
+    title: 'Toki',
+    headline: 'Toki',
+    subtitle: 'Minimalist static blog template for Waku',
   };
 
   return data;
