@@ -2,6 +2,8 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { postArray } from '../../helper';
 import '../../styles.css'
+import * as motion from 'framer-motion/client'
+
 interface PostPageProps {
   slug: string;
 }
@@ -11,9 +13,12 @@ export default async function PostPage({slug}: PostPageProps) {
   return (
     <div className="bg-white px-4 py-8">
     <h2 className="page-title">{data.title}</h2>
-    <article className="blog-content prose-img:rounded-lg prose-img:mx-auto mx-auto">
+    <motion.div
+      layoutId={slug}
+      layout='position'
+      className="blog-content prose-img:rounded-lg prose-img:mx-auto mx-auto">
       <Markdown remarkPlugins={[remarkGfm]}>{data.markdown}</Markdown>
-    </article>
+    </motion.div>
     </div>
   )
 }

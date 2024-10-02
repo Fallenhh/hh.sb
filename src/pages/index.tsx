@@ -2,6 +2,7 @@ import { Link } from 'waku';
 import { postArray } from '../helper';
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import * as motion from 'framer-motion/client'
 
 export default async function HomePage() {
   const data = await getData();
@@ -10,7 +11,10 @@ export default async function HomePage() {
       return (
         <li key={post.name}>
         <div className="bg-white py-8 px-4 my-4 hover:drop-shadow rounded-md">
-          <h2 className="text-2xl font-bold ">{post.title}</h2>
+          <motion.h2
+            layoutId={post.name}
+            layout='position'
+            className="text-2xl font-bold ">{post.title}</motion.h2>
           <div className="">
           <Markdown remarkPlugins={[remarkGfm]}>{post.excerpt}</Markdown>
           </div>
