@@ -2,8 +2,7 @@ import { Link } from 'waku';
 
 export const Header = () => {
   return (
-    <header className="flex columns-2 items-center gap-4 p-6 fixed left-0 top-0 w-screen bg-white drop-shadow">
-      <nav>
+    <header className="flex flex-row columns-2 items-center gap-4 p-6 fixed left-0 top-0 w-screen bg-white drop-shadow">
       <div className="flex">
       <h2 className="text-lg font-bold tracking-tight">
         <Link to="/">Home</Link>
@@ -14,7 +13,6 @@ export const Header = () => {
         <Link to="/about">About</Link>
       </h2>
       </div>
-      </nav>
     </header>
   );
 };
