@@ -11,7 +11,7 @@ interface PostPageProps {
 export default async function PostPage({slug}: PostPageProps) {
   const data = await getData(slug);
   return (
-    <div className="bg-white px-4 py-8">
+    <div className="bg-white px-4 py-8 md:w-4/5 w-full mx-auto">
     <h2 className="page-title">{data.title}</h2>
     <motion.div
       layoutId={slug}

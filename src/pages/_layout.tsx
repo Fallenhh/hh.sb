@@ -3,7 +3,6 @@ import '../styles.css';
 import type { ReactNode } from 'react';
 
 import { Header } from '../components/header';
-import { Footer } from '../components/footer';
 
 type RootLayoutProps = { children: ReactNode };
 
@@ -13,13 +12,13 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html>
       <head></head>
-      <body className="bg-slate-50">
-        <div className="font-['Nunito'] flex columns-1 min-w-full justify-center">
+      <body className="bg-slate-50 m-0">
+        <div className="font-['Nunito'] columns-1 min-w-full justify-center">
           <meta property="description" content={data.description} />
           <link rel="icon" type="image/png" href={data.icon} />
           <Header />
-          <main className="mt-24 flex justify-center w-full">
-            <div className="lg:w-3/5 w-full px-3">
+          <main className="lg:mt-20 md:mt-20 justify-center w-full px-4">
+            <div>
               {children}
             </div>
           </main>

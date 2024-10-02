@@ -27,7 +27,7 @@ export default async function HomePage() {
   )
   console.log(postArray);
   return (
-    <>
+    <div className="px-1 py-8 lg:w-3/5 md:w-4/5 w-full mx-auto">
       <title>{data.title}</title>
       <h1 className="page-title">{data.headline}</h1>
       <p>{data.subtitle}</p>
@@ -36,7 +36,7 @@ export default async function HomePage() {
         About page
       </Link>
 
-    </>
+    </div>
   );
 }
 
