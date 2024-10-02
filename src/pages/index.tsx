@@ -9,26 +9,30 @@ export default async function HomePage() {
     post => {
       return (
         <li key={post.name}>
-        <div>
-          <h2>{post.title}</h2>
+        <div className="bg-white py-8 px-4 my-4 hover:drop-shadow rounded-md">
+          <h2 className="text-2xl font-bold ">{post.title}</h2>
+          <div className="">
           <Markdown remarkPlugins={[remarkGfm]}>{post.excerpt}</Markdown>
-          <Link to={'/posts/'+ post.name} className="mt-4 inline-block underline"> Read More </Link>
+          </div>
+          <div className="flex justify-end">
+            <Link to={'/posts/'+ post.name} className="mt-4 inline-block bg-amber-50 px-2 hover:bg-amber-100"> Read More </Link>
+          </div>
         </div>
         </li>);
     }
   )
   console.log(postArray);
   return (
-    <div>
+    <>
       <title>{data.title}</title>
-      <h1 className="text-4xl font-bold tracking-tight">{data.headline}</h1>
+      <h1 className="page-title">{data.headline}</h1>
       <p>{data.subtitle}</p>
       <ul>{postList}</ul>
       <Link to="/about" className="mt-4 inline-block underline">
         About page
       </Link>
 
-    </div>
+    </>
   );
 }
 

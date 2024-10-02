@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.external-link {
+  @apply text-blue-600 visited:text-purple-600 hover:underline decoration-solid;
+}
+
+.page-title {
+  @apply text-center text-4xl font-semibold mb-4
+}
+
+.blog-content {
+  @apply prose prose-img:rounded-l prose-img:mx-auto prose-a:text-blue-600 hover:prose-a:text-blue-500
+}

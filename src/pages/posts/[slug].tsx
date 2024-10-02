@@ -9,8 +9,9 @@ interface PostPageProps {
 export default async function PostPage({slug}: PostPageProps) {
   const data = await getData(slug);
   return (
-    <div>
-    <article className="prose prose-l prose-slate">
+    <div className="bg-white px-4 py-8">
+    <h2 className="page-title">{data.title}</h2>
+    <article className="blog-content prose-img:rounded-lg prose-img:mx-auto mx-auto">
       <Markdown remarkPlugins={[remarkGfm]}>{data.markdown}</Markdown>
     </article>
     </div>
@@ -21,6 +22,7 @@ const getData = async (slug: string) => {
   const post = postArray.find(post => post.name === slug);
   const data = {
     markdown: post!.content,
+    title: post!.title,
   };
   return data; 
 };
