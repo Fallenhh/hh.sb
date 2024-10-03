@@ -28,7 +28,8 @@ export default async function HomePage() {
       <h1 className="page-title">{data.headline}</h1>
       <p>{data.subtitle}</p>
       <ul>{postList}</ul>
-      <Link to="/about" className="mt-4 inline-block underline">
+      <span>Contents under CC BY-SA, see more in </span>   
+      <Link to="/about" className="underline text-blue-700 hover:text-blue-400">
         About page
       </Link>
 
