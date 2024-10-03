@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  waku:
+    hash: qzakxjretxu6sjhvalwmbf32uu
+    path: patches/waku.patch
+
 importers:
 
   .:
@@ -31,7 +36,7 @@ importers:
         version: 4.0.0
       waku:
         specifier: 0.21.2
-        version: 0.21.2(@types/node@22.5.1)(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react-server-dom-webpack@19.0.0-rc-d6cb4e77-20240911(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react@19.0.0-rc-d6cb4e77-20240911)(webpack@5.94.0))(react@19.0.0-rc-d6cb4e77-20240911)(terser@5.31.6)
+        version: 0.21.2(patch_hash=qzakxjretxu6sjhvalwmbf32uu)(@types/node@22.5.1)(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react-server-dom-webpack@19.0.0-rc-d6cb4e77-20240911(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react@19.0.0-rc-d6cb4e77-20240911)(webpack@5.94.0))(react@19.0.0-rc-d6cb4e77-20240911)(terser@5.31.6)
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.15
@@ -3473,7 +3478,7 @@ snapshots:
       fsevents: 2.3.3
       terser: 5.31.6
 
-  waku@0.21.2(@types/node@22.5.1)(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react-server-dom-webpack@19.0.0-rc-d6cb4e77-20240911(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react@19.0.0-rc-d6cb4e77-20240911)(webpack@5.94.0))(react@19.0.0-rc-d6cb4e77-20240911)(terser@5.31.6):
+  waku@0.21.2(patch_hash=qzakxjretxu6sjhvalwmbf32uu)(@types/node@22.5.1)(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react-server-dom-webpack@19.0.0-rc-d6cb4e77-20240911(react-dom@19.0.0-rc-d6cb4e77-20240911(react@19.0.0-rc-d6cb4e77-20240911))(react@19.0.0-rc-d6cb4e77-20240911)(webpack@5.94.0))(react@19.0.0-rc-d6cb4e77-20240911)(terser@5.31.6):
     dependencies:
       '@hono/node-server': 1.12.2(hono@4.6.1)
       '@swc/core': 1.6.7
