@@ -5,10 +5,12 @@ export default async function AboutPage() {
     <h2 className="page-title"> About Toki </h2>
     <div className="blog-content prose-img:rounded-lg prose-img:mx-auto mx-auto">
       <p>Toki is a minimal blog theme based on <a href="https://waku.gg">waku</a>. There is zero configuration file(s), so you just modify the code.</p>
-
-      <p>Copyright © 2024 Fallenhh fallen2hh[at]gmail.com This work is free. You can redistribute it and/or modify it under the terms of the Do What The Fuck You Want To Public License, Version 2, as published by Sam Hocevar. See <a href="http://www.wtfpl.net">http://www.wtfpl.net/</a> for more details.</p>
-
-      <p> You can choose whatever <a href="https://creativecommons.org/">creative commons</a> license here for your own posts at will.</p>
+      <p>Toki is under UNLICENSE, which means it is free and unencumbered software released into the public domain.
+      Anyone is free to copy, modify, publish, use, compile, sell, or
+      distribute this software, either in source code form or as a compiled
+      binary, for any purpose, commercial or non-commercial, and by any
+      means. Please refer to <a href="https://unlicense.org">https://unlicense.org</a> for more information.</p>
+      <p> You can choose whatever <a href="https://creativecommons.org/">creative commons</a> license or other licenses here for your own posts at will.</p>
       <p> E.g. All the contents from this website is under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a> </p>
     </div>
     </div>
