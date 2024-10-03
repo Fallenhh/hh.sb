@@ -13,7 +13,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     <html>
       <head></head>
       <body className="bg-slate-50 m-0">
-        <div className="font-['Nunito'] columns-1 min-w-full justify-center">
+        <div className="columns-1 min-w-full justify-center">
           <meta property="description" content={data.description} />
           <link rel="icon" type="image/png" href={data.icon} />
           <Header />
