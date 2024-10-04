@@ -1,8 +1,8 @@
-import '../styles.css';
+import "../styles.css";
 
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-import { Header } from '../components/header';
+import { Header } from "../components/header";
 
 type RootLayoutProps = { children: ReactNode };
 
@@ -18,9 +18,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           <link rel="icon" type="image/png" href={data.icon} />
           <Header />
           <main className="lg:mt-20 md:mt-20 justify-center w-full px-4">
-            <div>
-              {children}
-            </div>
+            <div>{children}</div>
           </main>
         </div>
       </body>
@@ -30,8 +28,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
 const getData = async () => {
   const data = {
-    description: 'An internet website!',
-    icon: '/images/favicon.png',
+    description: "An internet website!",
+    icon: "/images/favicon.png",
   };
 
   return data;
@@ -39,6 +37,6 @@ const getData = async () => {
 
 export const getConfig = async () => {
   return {
-    render: 'static',
+    render: "static",
   };
 };

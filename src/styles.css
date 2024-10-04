@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 .external-link {
   @apply text-blue-600 visited:text-purple-600 hover:underline decoration-solid;
 }
 
 .page-title {
-  @apply text-center text-4xl font-medium mb-4
+  @apply text-center text-4xl font-medium mb-4;
 }
 
 .blog-content {
-  @apply prose prose-img:rounded-l prose-img:mx-auto prose-a:text-blue-700 hover:prose-a:text-blue-400 prose-headings:font-medium
+  @apply prose prose-img:rounded-l prose-img:mx-auto prose-a:text-blue-700 hover:prose-a:text-blue-400 prose-headings:font-medium;
 }
 
 .header-item {
-  @apply text-lg font-semibold tracking-tight hover:text-gray-400 duration-300
+  @apply text-lg font-semibold tracking-tight hover:text-gray-400 duration-300 md:px-6;
 }
 
 .date {
-  @apply w-min bg-gray-100 rounded-lg px-2 text-sm
+  @apply w-min bg-gray-100 rounded-lg px-2 text-sm;
 }
