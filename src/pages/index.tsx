@@ -36,9 +36,9 @@ export default async function HomePage() {
 
 const getData = async () => {
   const data = {
-    title: "Toki",
-    headline: "Toki",
-    subtitle: "Minimalist static blog template for Waku",
+    title: "Atelier Fallenhh",
+    headline: "Atelier Fallenhh",
+    subtitle: "Writings for my life.",
   };
 
   return data;
